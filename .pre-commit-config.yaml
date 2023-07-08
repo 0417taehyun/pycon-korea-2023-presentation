@@ -1,0 +1,25 @@
+# pre-commit의 단점 중 하나는 pyproject.toml 파일 등의 설정값을 정의한 파일을 읽을 수 없다는 것이에요.
+# 왜냐하면 각 훅이 독립된 환경을 보장 받고, 해당 환경에서 작동을 하기 때문이에요.
+# 그래서 결국 pyproject.toml 파일과 동일한 설정값을 적용하고 싶다면 YAML 파일 내에 값을 전달해야 해요.
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.4.1'
+    hooks:
+    -   id: mypy
+        exclude: ^test/
+-   repo: https://github.com/ambv/black
+    rev: 23.3.0
+    hooks:
+    -   id: black
+        args: ["--line-length=30"]
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
