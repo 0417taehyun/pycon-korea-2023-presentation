@@ -1,5 +1,9 @@
 # PyCon Korea 2023 발표 <파이썬을 처음 사용하는 동료와 효율적으로 일하는 방법>
 
+## 발표자료
+
+- 발표자료는 [0417taehyun/Presentation](https://github.com/0417taehyun/Presentation) 레포지토리에서 확인 가능해요.
+
 ## 가상환경 구성 및 패키지 설치
 
 - [Poetry] 패키지를 설치한 뒤, 해당 프로젝트에서 `poetry install` 명령어를 실행해보세요.
